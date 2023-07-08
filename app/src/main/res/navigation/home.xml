@@ -1,0 +1,48 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeNavigation"
+    app:startDestination="@id/home">
+    <fragment
+        android:id="@+id/offerScreen"
+        android:name="com.example.ecommerceapp.fragments.home.OfferScreen"
+        android:label="OfferScreen"
+        tools:layout="@layout/fragment_offer_screen">
+        <action
+            android:id="@+id/action_offerScreen_to_productDetails"
+            app:destination="@id/productDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteProducts"
+        android:name="com.example.ecommerceapp.fragments.home.FavoriteProducts"
+        android:label="FavoriteProducts"
+        tools:layout="@layout/fragment_favorite_products">
+        <action
+            android:id="@+id/action_favoriteProducts_to_productDetails"
+            app:destination="@id/productDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.ecommerceapp.fragments.home.Home"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_offerScreen"
+            app:destination="@id/offerScreen" />
+        <action
+            android:id="@+id/action_home_to_explore"
+            app:destination="@+id/exploreNavigation" />
+        <action
+            android:id="@+id/action_home_to_favoriteProducts"
+            app:destination="@id/favoriteProducts" />
+        <action
+            android:id="@+id/action_home_to_productDetails"
+            app:destination="@id/productDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetails"
+        android:name="com.example.ecommerceapp.fragments.home.ProductDetails"
+        android:label="ProductDetails"
+        tools:layout="@layout/fragment_product_details" />
+    <action android:id="@+id/action_global_home" app:destination="@id/home"/>
+</navigation>

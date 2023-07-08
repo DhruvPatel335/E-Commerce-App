@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/rounded_background_product">
+
+    <ImageView
+        android:id="@+id/ivProductImage"
+        android:layout_width="100dp"
+        android:background="@drawable/rounded_imageview_background"
+        android:layout_height="@dimen/match_constraint"
+        android:layout_margin="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/offer_one"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="XXXXXX XXXXX"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivProductImage" />
+
+    <TextView
+        android:id="@+id/tvProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="$ XXX.XX"
+        android:textColor="@color/blue_brand_color"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+    <TextView
+        android:id="@+id/tvOriginalProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="$ XXX.XX"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProductPrice"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="XX% Off"
+        android:textColor="@color/discount_color"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tvOriginalProductPrice"
+        app:layout_constraintTop_toBottomOf="@id/tvProductPrice" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragments.home.Home">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/svSearchProduct"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_background_product"
+                android:hint="Search Product"
+                app:iconifiedByDefault="false"
+                app:layout_constraintEnd_toStartOf="@id/ivLove"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivLove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/love"
+                app:layout_constraintBottom_toBottomOf="@+id/svSearchProduct"
+                app:layout_constraintEnd_toStartOf="@id/ivNotification"
+                app:layout_constraintStart_toEndOf="@id/svSearchProduct"
+                app:layout_constraintTop_toTopOf="@id/svSearchProduct" />
+
+            <ImageView
+                android:id="@+id/ivNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/notification"
+                app:layout_constraintBottom_toBottomOf="@+id/svSearchProduct"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivLove"
+                app:layout_constraintTop_toTopOf="@id/svSearchProduct" />
+
+            <View
+                android:id="@+id/vPartition"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/light_grey"
+                app:layout_constraintTop_toBottomOf="@id/svSearchProduct" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vpCarousel"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@id/vPartition" />
+
+            <TextView
+                android:id="@+id/tvCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Categories"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vpCarousel" />
+
+            <TextView
+                android:id="@+id/tvMoreCategores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="More Categories"
+                android:textColor="@color/blue_brand_color"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vpCarousel" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvCategories" />
+
+            <TextView
+                android:id="@+id/tvFlashSale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Flash Sale"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvCategories" />
+
+            <TextView
+                android:id="@+id/tvMoreFlashSale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="See More"
+                android:textColor="@color/blue_brand_color"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvCategories" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFlashSale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvFlashSale" />
+
+            <TextView
+                android:id="@+id/tvMegaSale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Mega Sale"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvFlashSale" />
+
+            <TextView
+                android:id="@+id/tvMoreMegaSale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="See More"
+                android:textColor="@color/blue_brand_color"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvFlashSale" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMegaSale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvMegaSale" />
+
+
+            <ImageView
+                android:id="@+id/ivRecommendedProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/promotion_image_two"
+                app:layout_constraintTop_toBottomOf="@id/rvMegaSale" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRecommendedProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@id/ivRecommendedProducts" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

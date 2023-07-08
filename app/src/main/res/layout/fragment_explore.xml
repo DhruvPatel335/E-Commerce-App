@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragments.explore.Explore">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/svSearchProduct"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_background_product"
+                android:hint="Search Product"
+                app:iconifiedByDefault="false"
+                app:layout_constraintEnd_toStartOf="@id/ivLove"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivLove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/love"
+                app:layout_constraintBottom_toBottomOf="@+id/svSearchProduct"
+                app:layout_constraintEnd_toStartOf="@id/ivNotification"
+                app:layout_constraintStart_toEndOf="@id/svSearchProduct"
+                app:layout_constraintTop_toTopOf="@id/svSearchProduct" />
+
+            <ImageView
+                android:id="@+id/ivNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/notification"
+                app:layout_constraintBottom_toBottomOf="@+id/svSearchProduct"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivLove"
+                app:layout_constraintTop_toTopOf="@id/svSearchProduct" />
+
+            <View
+                android:id="@+id/vPartition"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/light_grey"
+                app:layout_constraintTop_toBottomOf="@id/svSearchProduct" />
+
+            <TextView
+                android:id="@+id/tvMenFashion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Man Fashion"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vPartition" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvManFashion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMenFashion" />
+
+            <TextView
+                android:id="@+id/tvWomanFashion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Woman Fashion"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvManFashion" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvWomanFashion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWomanFashion" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

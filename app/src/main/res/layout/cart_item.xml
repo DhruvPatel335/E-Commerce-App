@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/rounded_background_product">
+
+    <ImageView
+        android:id="@+id/ivProductImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/offer_one"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Product name"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/ivProductImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="$ XXXXXX"
+        android:textColor="@color/blue_brand_color"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/ivProductImage"
+        app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+    <ImageView
+        android:id="@+id/ivLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/love"
+        app:layout_constraintEnd_toEndOf="@id/ivTrash"
+        app:layout_constraintStart_toEndOf="@id/tvProductName"
+        app:layout_constraintTop_toTopOf="@id/tvProductName" />
+
+    <ImageView
+        android:id="@+id/ivTrash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/trash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivLike"
+        app:layout_constraintTop_toTopOf="@id/ivLike" />
+
+    <ImageView
+        android:id="@+id/ivMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:src="@drawable/minus"
+        app:layout_constraintEnd_toStartOf="@id/ivMinus"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/tvProductPrice"
+        app:layout_constraintTop_toTopOf="@+id/tvProductPrice" />
+
+    <TextView
+        android:id="@+id/tvQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        app:layout_constraintEnd_toStartOf="@id/ivPlus"
+        app:layout_constraintStart_toEndOf="@+id/ivMinus"
+        app:layout_constraintTop_toTopOf="@id/ivMinus" />
+
+    <ImageView
+        android:id="@+id/ivPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvQuantity"
+        app:layout_constraintTop_toTopOf="@id/tvQuantity" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
