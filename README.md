@@ -1,6 +1,5 @@
 # Creating the content of the README.md file
 
-readme_content = """
 # E-Commerce Mobile Application
 
 This is a feature-rich E-Commerce mobile application built to offer users a seamless and engaging shopping experience. Developed in May 2023, this project incorporates modern technologies and best practices in mobile app development to deliver a user-centric, scalable, and secure platform.
